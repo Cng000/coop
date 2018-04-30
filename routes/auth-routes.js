@@ -19,17 +19,16 @@ router.get('/google',passport.authenticate('google',{
 
 //callback from google redirect to
 router.get('/google/redirect',passport.authenticate('google'),function(req,res){
-  //doesnt see the manager
-  // if(req.user.manager){
-  //   console.log('manager true');
-  //   res.redirect('/profile/');
-  // }
-  // else if (req.user.provider) {
-  //   console.log('provider true');
-  //   res.render('provider');
-  // }
-  // else
-   if(req.user.complete){
+//  use for redirecting different users
+  if(req.user.manager){
+    console.log('manager true');
+    res.redirect('/profile/');
+  }
+  else if (req.user.provider) {
+    console.log('provider true');
+    res.render('provider');
+  }
+  else if(req.user.complete){
     console.log('user true');
     res.redirect('/profile/');
   }

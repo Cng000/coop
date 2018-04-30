@@ -2,6 +2,7 @@ var express = require('express');
 var router = express.Router();
 var model = require('../models/model');
 
+// checks for user authentication
 var authCheck = function(req, res,next){
   if(!req.user){
     console.log('couldnt authenticate: '+req.id);
@@ -11,6 +12,7 @@ var authCheck = function(req, res,next){
     next();
   }
 };
+
 router.get('/',authCheck,function (req,res){
     console.log('called profile.ejs');
     res.render('profile',{user:req.user});
