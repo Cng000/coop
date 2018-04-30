@@ -1,0 +1,157 @@
+<form class="form-horizontal" id="myform" action='/profile/update' method="POST">
+    <fieldset>
+        <div id="legend">
+            <legend class="">Register</legend>
+        </div>
+        <div class="control-group">
+            <!-- Username -->
+            <label class="control-label" for="name">Name</label>
+            <div class="controls">
+                <input type="text" id="name" name="name" placeholder="" class="input-xlarge">
+            </div>
+        </div>
+
+        <div class="control-group">
+            <!-- Last -->
+            <label class="control-label" for="username">Last name</label>
+            <div class="controls">
+                <input type="text" id="last" name="last" placeholder="" class="input-xlarge">
+            </div>
+        </div>
+
+        <div class="control-group">
+            <!-- Age -->
+            <label class="control-label" for="username">Age</label>
+            <div class="controls">
+                <input type="text" id="age" name="age" placeholder="" class="input-xlarge">
+            </div>
+        </div>
+
+        <div class="control-group">
+            <!-- DOB -->
+            <label class="control-label" for="birthday">Birthday</label>
+            <div class="controls">
+                <input type="text" id="birthday" name="birthday" placeholder="" class="input-xlarge">
+            </div>
+        </div>
+
+        <div class="control-group">
+            <!-- Address -->
+            <label class="control-label" for="address">Address</label>
+            <div class="controls">
+                <input type="text" id="address" name="address" placeholder="" class="input-xlarge">
+            </div>
+        </div>
+
+        <div class="control-group">
+            <!-- city -->
+            <label class="control-label" for="city">City</label>
+            <div class="controls">
+                <input type="text" id="city" name="city" placeholder="" class="input-xlarge">
+            </div>
+        </div>
+
+        <div class="control-group">
+            <!-- state -->
+            <label class="control-label" for="state">State</label>
+            <div class="controls">
+                <input type="text" id="state" name="state" placeholder="" class="input-xlarge">
+            </div>
+        </div>
+
+        <div class="control-group">
+            <!-- zipcode -->
+            <label class="control-label" for="zipcode">Zipcode</label>
+            <div class="controls">
+                <input type="text" id="zipcode" name="zipcode" placeholder="" class="input-xlarge">
+            </div>
+        </div>
+
+        <div class="control-group">
+            <!-- phone -->
+            <label class="control-label" for="phone">Phone</label>
+            <div class="controls">
+                <input type="text" id="phone" name="phone" placeholder="" class="input-xlarge">
+            </div>
+        </div>
+
+        <div class="control-group">
+            <!-- occupation -->
+            <label class="control-label" for="occupation">Occupation</label>
+            <div class="controls">
+                <input type="text" id="occupation" name="occupation" placeholder="" class="input-xlarge">
+            </div>
+        </div>
+
+        <div class="control-group">
+            <!-- education -->
+            <label class="control-label" for="education">Education</label>
+            <div class="controls">
+                <input type="text" id="education" name="education" placeholder="" class="input-xlarge">
+            </div>
+        </div>
+
+        <div class="control-group">
+            <!-- salary -->
+            <label class="control-label" for="salary">Salary</label>
+            <div class="controls">
+                <input type="text" id="salary" name="salary" placeholder="" class="input-xlarge">
+            </div>
+        </div>
+
+        <div class="control-group">
+            <!-- income -->
+            <label class="control-label" for="income">Income</label>
+            <div class="controls">
+                <input type="text" id="income" name="income" placeholder="" class="input-xlarge">
+            </div>
+        </div>
+
+        <div class="control-group">
+            <!-- Ethinicity -->
+            <label class="control-label" for="ethinicity">Ethnicity</label>
+            <div class="controls">
+                <input type="text" id="ethnicity" name="ethnicity" placeholder="" class="input-xlarge">
+            </div>
+        </div>
+
+        <div class="control-group">
+            <!-- email-->
+            <label class="control-label" for="password">Email</label>
+            <div class="controls">
+                <input type="email" id="email" name="email" placeholder="" class="input-xlarge">
+            </div>
+        </div>
+
+        <div class="control-group">
+            <!-- Password-->
+            <label class="control-label" for="password">Password</label>
+            <div class="controls">
+                <input type="password" id="password" name="password" placeholder="" class="input-xlarge">
+            </div>
+        </div>
+
+        <div class="control-group">
+            <!-- Button -->
+            <div class="controls">
+                <button class="btn btn-success">Register</button>
+            </div>
+        </div>
+  <script>
+    $(document).ready(function () {
+      $("#submitform").click(function (e) {
+          var MyForm = JSON.stringify($("#myform").serializeJSON());
+          console.log('json');
+          console.log(MyForm);
+          $.ajax(
+              {
+                  url: "<your url>",
+                  type: "POST",
+                  data: MyForm,
+              });
+          e.preventDefault(); //STOP default action
+      });
+    });
+  </script>
+    </fieldset>
+</form>
