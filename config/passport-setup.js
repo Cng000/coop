@@ -27,49 +27,51 @@ passport.deserializeUser(function(id,done){
     return query;
   }
 
-  // var Manager = Managergoogleid(id);
-  // var Provider = Providergoogleid(id);
+  var Manager = Managergoogleid(id);
+  var Provider = Providergoogleid(id);
   var Student = Studentgoogleid(id);
 
-  // if(!Manager.lenght){
-  //   // console.log(Manager.lenght)
-  //   console.log('not manager deserialize');
-  // }
-  // else {
-  //   console.log('manager deserialize');
-  //   Manager.exec(function(manager){
-  //     return done(null,manager);
-  // });
-  // }
+  if(Manager){
+    // console.log(Manager.lenght)
+    Manager.then(function(manager){
+      if(manager){
+        console.log('deserializing manager');
+        return done(null,manager);
+      }
+      else{
+        // console.log('mana');
+        // next();
+      }
+  });
+}
 
-  // if(!Provider.lenght){
-  //   // console.log(Provider.lenght)
-  //   console.log('not provider deserialize ');
-  // }
-  // else {
-  //   console.log('provider deserialize ');
-  //   Provider.exec(function(provider){
-  //     return done(null,provider);
-  //   });
-  // }
-
-  if(!Student){
-    // console.log(Student);
-    console.log('student deserialize');
-    Student.then(function(student){
-      return done(null,student);
+  if(Provider){
+    Provider.then(function(provider){
+      if(provider){
+        console.log('deserializing provider');
+        return done(null,provider);
+      }
+      else{
+        // console.log('provider ')
+        // next();
+      }
     });
   }
-  else {
-    console.log('deserialize student');
+
+  if(Student){
     Student.then(function(student){
-      return done(null,student);
+      if(student){
+        console.log('deserializing student');
+        return done(null,student);
+      }
+      else{
+        // console.log('student')
+      }
     });
   }
 });
 
 //Authenticate function api call
-
 passport.use(new GoogleStrategy({
     callbackURL:'/auth/google/redirect',
     clientID:"994955090565-6jj0jjuo9hfr2j38f5u3dsbjmqmjgkba.apps.googleusercontent.com",
@@ -88,39 +90,44 @@ passport.use(new GoogleStrategy({
     var query = model.Student.findOne({googleid:id}).exec();
     return query;
   }
-  // var Manager = Managergoogleid(profile.id);
-  // var Provider = Providergoogleid(profile.id);
+  var Manager = Managergoogleid(profile.id);
+  var Provider = Providergoogleid(profile.id);
   var Student = Studentgoogleid(profile.id);
 
   // console.log('googleid is: '+profile.id);
 
-  // if(!Manager.lenght){
-  //       // Manager.exec(function(){
-  //         console.log('not manager');
-  //     // });
-  // }
-  // else {
-  //     Manager.then(function(manager){
-  //     console.log('found manager');
-  //       return done(null,manager);
-  //   });
-  // }
-  // if (!Provider.length) {
-  //     // Provider.exec(function(){
-  //       console.log('not provider');
-  //   // });
-  // }
-  // else {
-  //     // console.log('provider null'+Provider);
-  //     Provider.then(function(provider){
-  //     console.log('found provider');
-  //       return done(null,provider);
-  //   });
-  // }
+  if(Manager){
+        // Manager.exec(function(){
+        Manager.then(function(manager){
+            // console.log(manager.googleid);
+            if(manager){
+              console.log('found manager');
+              return done(null,manager);
+            }
+            else {
+              return console.log('no manager');
+          }
+        });
+  }
+
+  if (Provider) {
+    Provider.then(function(provider){
+      if(provider){
+        console.log('found provider');
+        return done(null,provider);
+      }
+      else{
+        return console.log('no provider');
+      }
+    });
+  }
+  
+
   if(Student){
     Student.then(function(student){
       if(student){
         console.log('found student\n');
+        // console.log(student.googleid);
         return done(null,student);
       }
       else{

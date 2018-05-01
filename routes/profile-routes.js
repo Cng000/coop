@@ -15,7 +15,7 @@ var authCheck = function(req, res,next){
 
 router.get('/',authCheck,function (req,res){
     console.log('called profile.ejs');
-    console.log(req.user.fname);
+    // console.log(req.user.fname);
     res.render('profile',{user:req.user});
 });
 
@@ -37,7 +37,7 @@ router.post('/update',function (req,res) {
     salary: req.body.salary,
     yr_income: req.body.income,
     ethnicity: req.body.ethnicity,
-    email: req.body.email,
+    // email: req.body.email,
     password: req.body.password,
     complete: true,
   };
