@@ -36,10 +36,22 @@ passport.use(new GoogleStrategy({
     clientSecret:"8eQcMbcv2zWV7TKnDHA6i7rb"
 },function(accessToken,refreshToken,profile,done){
 
-  // var Manager = model.Manager.findOne({googleid:profile.id});
-  // var Provider = model.Provider.findOne({googleid:profile.id});
-  // var Student = model.Student.findOne({googleid:profile.id});
-  //
+  function Managergoogleid(id){
+     var query = model.Manager.find({googleid:id}).exec();
+     return query;
+  }
+  function Providergoogleid(id){
+    var query = model.Provider.find({googleid:id}).exec();
+    return query;
+  }
+  function Studentgoogleid(id){
+    var query = model.Student.find({googleid:id}).exec();
+    return query;
+  }
+  var Manager = Managergoogleid(profile.id);
+  var Provider = Providergoogleid(profile.id);
+  var Student = Studentgoogleid(profile.id);
+
   // if(Manager){
   //     return done(null,Manager);
   // }
@@ -76,39 +88,74 @@ passport.use(new GoogleStrategy({
   //           done(null,newStudent);
   //         });
   // }
-  var student = model.Student.findOne({googleid:profile.id});
-  console.log('the query from outside: '+student);
 
-  model.Student.findOne({googleid:profile.id}).then(function(currentStudent){
-    if(currentStudent){
-      console.log('the query returns: '+currentStudent);
-      done(null,currentStudent)
-    }
-    else{
-      new model.Student({
-                fname: profile.name.givenName,
-                lname: profile.name.familyName,
-                googleid: profile.id,
-                age: "",
-                dob: "",
-                address: "",
-                city: "",
-                state: "",
-                zipcode: "",
-                phone: "",
-                occupation: "",
-                highest_education: "",
-                salary: "",
-                yr_income: "",
-                ethnicity: "",
-                email: profile.emails[0]['value'],
-                password: "",
-                complete: false,
-              }).save().then(function(newStudent){
-                console.log('new Student created');
-                done(null,newStudent);
-              });
-    }
-  });
+  if(Student){
+    Student.then(function(student){
+      if(student){
+        console.log('the query from outside: '+student);
+        return done(null,student);
+      }
+      else{
+        new model.Student({
+                  fname: profile.name.givenName,
+                  lname: profile.name.familyName,
+                  googleid: profile.id,
+                  age: "",
+                  dob: "",
+                  address: "",
+                  city: "",
+                  state: "",
+                  zipcode: "",
+                  phone: "",
+                  occupation: "",
+                  highest_education: "",
+                  salary: "",
+                  yr_income: "",
+                  ethnicity: "",
+                  email: profile.emails[0]['value'],
+                  password: "",
+                  complete: false,
+                }).save().then(function(newStudent){
+                  console.log('new Student created');
+                  done(null,newStudent);
+                });
+      }
+    });
+  }
+  //
+  // var student = model.Student.findOne({googleid:profile.id});
+  // console.log('the query from outside: '+ student);
+  //
+  // model.Student.findOne({googleid:profile.id}).then(function(currentStudent){
+  //   if(currentStudent){
+  //     console.log('the query returns: '+currentStudent);
+  //     done(null,currentStudent)
+  //   }
+  //   else{
+  //     new model.Student({
+  //               fname: profile.name.givenName,
+  //               lname: profile.name.familyName,
+  //               googleid: profile.id,
+  //               age: "",
+  //               dob: "",
+  //               address: "",
+  //               city: "",
+  //               state: "",
+  //               zipcode: "",
+  //               phone: "",
+  //               occupation: "",
+  //               highest_education: "",
+  //               salary: "",
+  //               yr_income: "",
+  //               ethnicity: "",
+  //               email: profile.emails[0]['value'],
+  //               password: "",
+  //               complete: false,
+  //             }).save().then(function(newStudent){
+  //               console.log('new Student created');
+  //               done(null,newStudent);
+  //             });
+  //   }
+  // });
 })
 )
