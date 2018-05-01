@@ -26,7 +26,7 @@ router.get('/google/redirect',passport.authenticate('google'),function(req,res){
   }
   else if (req.user.provider) {
     console.log('provider true');
-    res.render('provider');
+    res.redirect('/profile/');
   }
   else if(req.user.complete){
     console.log('user true');
@@ -34,7 +34,7 @@ router.get('/google/redirect',passport.authenticate('google'),function(req,res){
   }
   else{
     console.log('called forms');
-    // console.log('user id: '+req.user.id);
+    console.log('user id: '+req.user);
     res.render('forms',{user:req.user});
   }
 });

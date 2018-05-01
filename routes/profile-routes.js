@@ -15,12 +15,13 @@ var authCheck = function(req, res,next){
 
 router.get('/',authCheck,function (req,res){
     console.log('called profile.ejs');
+    console.log(req.user.fname);
     res.render('profile',{user:req.user});
 });
 
 router.post('/update',function (req,res) {
-  // console.log('update');
-  // console.log('the request is '+req.user.id);
+  //it updates but the req.user is an object that cant be seen
+  // console.log('the request is '+req.user);
   values = {
     // fname: req.body.name,
     // lname: req.body.last,
@@ -40,7 +41,8 @@ router.post('/update',function (req,res) {
     password: req.body.password,
     complete: true,
   };
-  console.log(values);
+  // console.log(values);
+  //DONT TOUCH IT WORKS AS OF 4:16 wiht _id:req.user.id
   model.Student.findOneAndUpdate({_id:req.user.id}, values, {new: true}, function(err, Student){
     if(err){
       console.log("Something wrong when updating data!");
