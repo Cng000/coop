@@ -9,6 +9,7 @@ var authCheck = function(req, res,next){
     res.redirect('/auth/login');
   }
   else{
+    // console.log('authCheck else statement')
     next();
   }
 };
@@ -22,8 +23,8 @@ router.post('/update',function (req,res) {
   //it updates but the req.user is an object that cant be seen
   // console.log('the request is '+req.user);
   values = {
-    // fname: req.body.name,
-    // lname: req.body.last,
+    fname: req.body.name,
+    lname: req.body.last,
     age: req.body.age,
     dob: req.body.birthday,
     address: req.body.address,

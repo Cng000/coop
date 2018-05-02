@@ -38,10 +38,6 @@ passport.deserializeUser(function(id,done){
         console.log('deserializing manager');
         return done(null,manager);
       }
-      else{
-        // console.log('mana');
-        // next();
-      }
   });
 }
 
@@ -50,10 +46,6 @@ passport.deserializeUser(function(id,done){
       if(provider){
         console.log('deserializing provider');
         return done(null,provider);
-      }
-      else{
-        // console.log('provider ')
-        // next();
       }
     });
   }
@@ -95,7 +87,6 @@ passport.use(new GoogleStrategy({
   var Student = Studentgoogleid(profile.id);
 
   // console.log('googleid is: '+profile.id);
-
   if(Manager){
         // Manager.exec(function(){
         Manager.then(function(manager){
@@ -104,9 +95,6 @@ passport.use(new GoogleStrategy({
               console.log('found manager');
               return done(null,manager);
             }
-            else {
-              return console.log('no manager');
-          }
         });
   }
 
@@ -116,12 +104,8 @@ passport.use(new GoogleStrategy({
         console.log('found provider');
         return done(null,provider);
       }
-      else{
-        return console.log('no provider');
-      }
     });
   }
-  
 
   if(Student){
     Student.then(function(student){
