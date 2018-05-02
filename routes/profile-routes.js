@@ -15,7 +15,6 @@ var authCheck = function(req, res,next){
 
 router.get('/',authCheck,function (req,res){
     console.log('called profile.ejs');
-    // console.log(req.user.fname);
     res.render('profile',{user:req.user});
 });
 
