@@ -1,53 +1,10 @@
+<!DOCTYPE html>
 <html>
-<head>
-  <meta name="google-signin-client_id"
-content="876392271539-coflqsv2n40a9qvsoainr96kv8rl898q.apps.googleusercontent.com">
-</head>
-<body>
-  <div id="my-signin2"></div>
-  <script>
-
-    function onSuccess(googleUser) {
-      var name = googleUser.getBasicProfile().getName();
-      var email = googleUser.getBasicProfile().getEmail();
-      var token =  googleUser.getAuthResponse().id_token;
-
-      var item = {
-        id_token: token,
-        name : name,
-        email: email
-      };
-
-    }
-
-    function onFailure(error) {
-      console.log(error);
-    }
-    //once the page loads it will activate this function, this calls signin
-    function renderButton() {
-      gapi.signin2.render('my-signin2', {
-        'scope': 'profile email',
-        'width': 240,
-        'height': 50,
-        'longtitle': true,
-        'theme': 'dark',
-        'onsuccess': onSuccess,
-        'onfailure': onFailure
-      });
-    }
-  </script>
-
-  <a href="#" onclick="signOut();">Sign out</a>
-<script>
-  function signOut() {
-    var auth2 = gapi.auth2.getAuthInstance();
-    auth2.signOut().then(function () {
-      console.log('User signed out.');
-    });
-  }
-</script>
-
-
-  <script src="https://apis.google.com/js/platform.js?onload=renderButton" async defer></script>
-</body>
+  <head>
+    <meta charset="utf-8">
+    <title>DYCDauto</title>
+  </head>
+  <body>
+  <h1>Hello_World</h1>
+  </body>
 </html>

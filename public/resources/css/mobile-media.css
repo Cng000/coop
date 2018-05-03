@@ -1,0 +1,810 @@
+
+
+/*
+  iphone 10 - media query
+*/
+@media only screen
+  and (min-device-width: 320px)
+  and (max-device-width: 480px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait){
+
+
+    .home-section{
+
+      height: 100vh;
+      background-image: linear-gradient(rgba(0, 0, 0,0.6),
+      rgba(0, 0, 0,0.6)),url('../img/img1.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+
+    }
+
+    .home-nav{
+      width: 100%;
+    }
+
+    .logo{
+      position: absolute;
+      float: left;
+      height: 150px;
+      width: 400px;
+      left: 5%;
+      margin-top: 2%;
+    }
+
+    .intro-section{
+      margin-top:15%;
+      width:100%;
+      height: auto;
+      position: absolute;
+      left: 50%;
+      top: 40%;
+      transform: translate(-50%,-50%);
+      /*border: 1px solid white;*/
+    }
+
+    .intro-section-main-header{
+      width: 70%;
+      height: 10%;
+      /*border: 1px solid white;*/
+      margin-left: 7%;
+      margin-right: 7%;
+    }
+
+    .intro-section h1{
+      text-align: left;
+      color: white;
+      word-spacing: 40px;
+      letter-spacing: 1px;
+      margin-top: 5%;
+      font-size: 100px;
+      font-weight: 300;
+    }
+
+    .intro-section h3{
+      margin-top:0px;
+      color: white;
+      word-spacing: 1px;
+      letter-spacing: 2px;
+      margin: 3%;
+      margin-left: 8%;
+      font-size: 25px;
+    }
+
+    .intro-section ul{
+      margin-top: 15%;
+      /*border: 1px solid white;*/
+      width: 100%;
+      height: auto;
+      /*border: 1px solid white;*/
+
+    }
+
+    .intro-section li{
+
+      float: left;
+      margin-left: 5%;
+      margin-right: 3%;
+    }
+    .intro-section a{
+      margin: 0;
+      margin-left: 15%;
+      display: inline-block;
+      /*border: 1px solid black;*/
+      font-size: 230%;
+      text-align: center;
+      line-height: 250%;
+      border-radius: 20px;
+      border: 0.5px solid #2874A6;
+    }
+
+
+    .btn-learn-more{
+      width: 110%;
+      height: 5vh;
+    }
+
+
+    .btn-developer{
+      background: #D4AC0D;
+      color: #2874A6;
+      border-color:  #D4AC0D;
+      font-weight: bolder;
+      width: 110%;
+      height: 5vh;
+    }
+    /*
+    video-section;
+    */
+
+    .video-section{
+  height: 30vh;
+  width: auto;
+  }
+
+  .video-section p{
+    padding-top: 100%;
+    width: 100%;
+    font-size: 100px;
+    /*border: 1px solid white;*/
+    /*text-align: center;
+    color: white;
+    vertical-align: middle;
+    /*align-items: center;*/
+  }
+
+    .video-section h3{
+      font-weight: 300;
+      word-spacing: 4px;
+      letter-spacing: 2px;
+      text-align: center;
+      color: white;
+      text-align: center;
+      /*border: 1px solid white;*/
+      /*text-align: center;
+      color: white;
+      text-align: center;*/
+    }
+
+    .video-section h2{
+      /*border: 1px solid white;*/
+      font-weight: 300;
+      letter-spacing: 2px;
+      word-spacing: 8px;
+      text-align: center;
+      color: #D4AC0D;
+      text-align: center;
+    }
+
+
+    .testimonial-section{
+      height: 45vh;
+    }
+
+    .section-learn{
+      height: 43vh;
+    }
+
+    .section-team{
+      height: 38vh;
+    }
+
+    .footer-section{
+      height: 10vh;
+    }
+
+
+}
+
+
+/* Iphone x landscape*/
+@media only screen
+  and (min-device-width: 320px)
+  and (max-device-width: 480px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: landscape ){
+
+    .home-section{
+
+      height: 100vh;
+      background-image: linear-gradient(rgba(0, 0, 0,0.6),
+      rgba(0, 0, 0,0.6)),url('../img/img1.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+
+    }
+
+    .home-nav{
+      width: 100%;
+    }
+
+    .intro-section{
+      margin-top:13%;
+      width:100%;
+      height: auto;
+      position: absolute;
+      left: 50%;
+      top: 30%;
+      transform: translate(-50%,-50%);
+      /*border: 1px solid white;*/
+    }
+
+    .intro-section-main-header{
+      width: 70%;
+      height: 10%;
+      /*border: 1px solid white;*/
+      margin-left: 7%;
+      margin-right: 7%;
+    }
+
+    .intro-section h1{
+      text-align: left;
+      color: white;
+      word-spacing: 4px;
+      letter-spacing: 1px;
+      margin-bottom: 0;
+      margin-top: 5%;
+      font-size: 35px;
+      font-weight: 300;
+      /*border: 1px solid white;*/
+    }
+
+    .intro-section h3{
+      margin-top:0px;
+      color: white;
+      word-spacing: 1px;
+      letter-spacing: 2px;
+      margin: 3%;
+      margin-left: 8%;
+      font-size: 15px;
+      /*border: 1px solid white;*/
+    }
+
+    .intro-section ul{
+      margin-top: 5%;
+      /*border: 1px solid white;*/
+      width: 100%;
+      height: auto;
+      /*border: 1px solid white;*/
+
+    }
+
+    .intro-section li{
+      float: left;
+      margin: 2%;
+    }
+    .intro-section a.btn{
+      margin: 0;
+      margin-left: 15%;
+      display: inline-block;
+      border: 1px solid black;
+      font-size: 130%;
+      text-align: center;
+      line-height: 180%;
+      border: 0.5px solid #2874A6;
+      margin-left: 30%;
+    }
+
+    .btn-learn-more{
+      width: 110%;
+      height: 13vh;
+    }
+
+    .btn{
+      border-radius: 20px;
+      margin: 5%;
+    }
+    .btn-developer{
+      background: #D4AC0D;
+      color: #2874A6;
+      border-color:  #D4AC0D;
+      font-weight: bolder;
+      width: 110%;
+      height: 13vh;
+    }
+
+
+    .video-section{
+      height: 100vh;
+      width: auto;
+    }
+
+    .video-section p{
+      /*padding-top: 25%;*/
+      width: 100%;
+      font-size: 100px;
+      /*border: 1px solid white;*/
+      /*text-align: center;
+      color: white;
+      vertical-align: middle;
+      /*align-items: center;*/
+    }
+
+    .video-section h3{
+      font-weight: 300;
+      word-spacing: 4px;
+      letter-spacing: 2px;
+      text-align: center;
+      color: white;
+      text-align: center;
+      /*border: 1px solid white;*/
+      /*text-align: center;
+      color: white;
+      text-align: center;*/
+    }
+
+    .video-section h2{
+      /*border: 1px solid white;*/
+      font-weight: 300;
+      letter-spacing: 2px;
+      word-spacing: 8px;
+      text-align: center;
+      color: #D4AC0D;
+      text-align: center;
+    }
+
+    .testimonial-section{
+      height: 150vh;
+    }
+
+    .section-learn{
+      height: 150vh;
+    }
+
+    .section-team{
+      height: 135vh;
+    }
+
+    .footer-section{
+      height: 30vh;
+    }
+
+
+
+}
+
+/* ----------- iPhone 6, 6S, 7 and 8 ----------- */
+
+/* Portrait */
+@media only screen
+  and (min-device-width: 375px)
+  and (max-device-width: 667px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait) {
+
+    .intro-section a{
+      line-height: 150%;
+    }
+
+    .video-section p{
+      padding-top: 17%;
+      width: 100%;
+      font-size: 100px;
+      /*border: 1px solid white;*/
+      /*text-align: center;
+      color: white;
+      vertical-align: middle;
+      /*align-items: center;*/
+    }
+
+    .video-section h3{
+      font-weight: 300;
+      word-spacing: 4px;
+      letter-spacing: 2px;
+      text-align: center;
+      color: white;
+      text-align: center;
+      /*border: 1px solid white;*/
+      /*text-align: center;
+      color: white;
+      text-align: center;*/
+    }
+
+    .video-section h2{
+      /*border: 1px solid white;*/
+      font-weight: 300;
+      letter-spacing: 2px;
+      word-spacing: 8px;
+      text-align: center;
+      color: #D4AC0D;
+      text-align: center;
+    }
+
+
+
+}
+
+/* Landscape */
+@media only screen
+  and (min-device-width: 375px)
+  and (max-device-width: 667px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: landscape) {
+    .intro-section a{
+      line-height: 200%;
+    }
+
+
+    .video-section p{
+      padding-top: 12%;
+      width: 100%;
+      font-size: 100px;
+      /*border: 1px solid white;*/
+      /*text-align: center;
+      color: white;
+      vertical-align: middle;
+      /*align-items: center;*/
+    }
+
+}
+
+/*
+  iphone 8 PLUS & 7 PLUS - media query
+*/
+@media only screen
+  and (min-device-width: 414px)
+  and (max-device-width: 736px)
+  and (-webkit-min-device-pixel-ratio: 3)
+  and (orientation: portrait) {
+
+
+      .intro-section a{
+        line-height: 140%;
+      }
+      .video-section p{
+        padding-top: 6%;
+        width: 100%;
+        font-size: 100px;
+        /*border: 1px solid white;*/
+        /*text-align: center;
+        color: white;
+        vertical-align: middle;
+        /*align-items: center;*/
+      }
+
+      .video-section h3{
+        font-weight: 300;
+        word-spacing: 4px;
+        letter-spacing: 2px;
+        text-align: center;
+        color: white;
+        text-align: center;
+        /*border: 1px solid white;*/
+        /*text-align: center;
+        color: white;
+        text-align: center;*/
+      }
+
+      .video-section h2{
+        /*border: 1px solid white;*/
+        font-weight: 300;
+        letter-spacing: 2px;
+        word-spacing: 8px;
+        text-align: center;
+        color: #D4AC0D;
+        text-align: center;
+      }
+
+      .testimonial-section{
+        height: 48vh;
+      }
+
+      .section-learn{
+        height: 48vh;
+      }
+
+      .section-team{
+        height: 48vh;
+      }
+
+      .footer-section{
+        height: 10vh;
+      }
+
+
+}
+
+@media only screen
+  and (min-device-width: 414px)
+  and (max-device-width: 736px)
+  and (-webkit-min-device-pixel-ratio: 3)
+  and (orientation: landscape){
+
+
+      .intro-section a{
+        line-height: 200%;
+      }
+
+
+}
+
+
+/* ----------- iPad 1, 2, Mini and Air ----------- */
+
+
+/* Portrait */
+@media only screen
+  and (min-device-width: 768px)
+  and (max-device-width: 1024px)
+  and (orientation: portrait)
+  and (-webkit-min-device-pixel-ratio: 1) {
+
+
+    .home-section{
+
+      height: 100vh;
+      background-image: linear-gradient(rgba(0, 0, 0,0.6),
+      rgba(0, 0, 0,0.6)),url('../img/img1.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+
+    }
+
+    .home-nav{
+      width: 100%;
+    }
+
+    .intro-section{
+      margin-top:15%;
+      width:100%;
+      height: auto;
+      position: absolute;
+      left: 50%;
+      top: 42%;
+      transform: translate(-50%,-50%);
+      /*border: 1px solid white;*/
+    }
+
+    .intro-section-main-header{
+      width: 70%;
+      height: 10%;
+      /*border: 1px solid white;*/
+      margin-left: 7%;
+      margin-right: 7%;
+    }
+
+    .intro-section h1{
+      text-align: left;
+      color: white;
+      word-spacing: 40px;
+      letter-spacing: 1px;
+      margin-top: 5%;
+      font-size: 100px;
+      font-weight: 300;
+    }
+
+    .intro-section h3{
+      margin-top:0px;
+      color: white;
+      word-spacing: 1px;
+      letter-spacing: 2px;
+      margin: 3%;
+      margin-left: 8%;
+      font-size: 25px;
+    }
+
+    .intro-section ul{
+      margin-top: 15%;
+      /*border: 1px solid white;*/
+      width: 100%;
+      height: auto;
+      /*border: 1px solid white;*/
+
+    }
+
+    .intro-section li{
+
+      float: left;
+      margin: 2%;
+    }
+    .intro-section a{
+      margin: 0;
+      margin-left: 15%;
+      display: inline-block;
+      border: 1px solid black;
+      font-size: 200%;
+      text-align: center;
+      line-height: 135%;
+      border: 0.5px solid #2874A6;
+    }
+
+    .intro-section h1{
+
+    }
+
+    .btn-learn-more{
+      width: 110%;
+      height: 6vh;
+    }
+
+    .btn{
+      border-radius: 20px;
+      margin: 5%;
+    }
+    .btn-developer{
+      background: #D4AC0D;
+      color: #2874A6;
+      border-color:  #D4AC0D;
+      font-weight: bolder;
+      width: 110%;
+      height: 6vh;
+    }
+
+
+    .video-section{
+      width: 100%;
+      height: 50vh;
+      }
+    .video-section p{
+      padding-top: 15%;
+      width: 100%;
+      font-size: 100px;
+      /*border: 1px solid white;*/
+      /*text-align: center;
+      color: white;
+      vertical-align: middle;
+      /*align-items: center;*/
+    }
+
+    .video-section h3{
+      font-weight: 300;
+      word-spacing: 4px;
+      letter-spacing: 2px;
+      text-align: center;
+      color: white;
+      text-align: center;
+      /*border: 1px solid white;*/
+      /*text-align: center;
+      color: white;
+      text-align: center;*/
+    }
+
+    .video-section h2{
+      /*border: 1px solid white;*/
+      font-weight: 300;
+      letter-spacing: 2px;
+      word-spacing: 8px;
+      text-align: center;
+      color: #D4AC0D;
+      text-align: center;
+    }
+
+    .testimonial-section{
+      height: 65vh;
+    }
+
+    .section-learn{
+      height: 65vh;
+    }
+
+    .section-team{
+      height: 65vh;
+    }
+
+    .footer-section{
+      height: 18vh;
+    }
+
+
+
+}
+
+/* Landscape */
+@media only screen
+  and (min-device-width: 768px)
+  and (max-device-width: 1024px)
+  and (orientation: landscape)
+  and (-webkit-min-device-pixel-ratio: 1) {
+
+        .home-section{
+
+          height: 100vh;
+          background-image: linear-gradient(rgba(0, 0, 0,0.6),
+          rgba(0, 0, 0,0.6)),url('../img/img1.jpg');
+          background-size: cover;
+          background-position: center;
+          background-repeat: no-repeat;
+
+        }
+
+        .home-nav{
+          width: 100%;
+        }
+
+        .intro-section{
+          margin-top:13%;
+          width:100%;
+          height: auto;
+          position: absolute;
+          left: 50%;
+          top: 35%;
+          transform: translate(-50%,-50%);
+          /*border: 1px solid white;*/
+        }
+
+        .intro-section-main-header{
+          width: 70%;
+          height: 10%;
+          /*border: 1px solid white;*/
+          margin-left: 7%;
+          margin-right: 7%;
+        }
+
+        .intro-section h1{
+          text-align: left;
+          color: white;
+          word-spacing: 4px;
+          letter-spacing: 1px;
+          margin-bottom: 0;
+          margin-top: 5%;
+          font-size: 50px;
+          font-weight: 300;
+          /*border: 1px solid white;*/
+        }
+
+        .intro-section h3{
+          margin-top:0px;
+          color: white;
+          word-spacing: 1px;
+          letter-spacing: 2px;
+          margin: 3%;
+          margin-left: 8%;
+          font-size: 15px;
+          /*border: 1px solid white;*/
+        }
+
+        .intro-section ul{
+          margin-top: 5%;
+          /*border: 1px solid white;*/
+          width: 100%;
+          height: auto;
+          /*border: 1px solid white;*/
+
+        }
+
+        .intro-section li{
+          float: left;
+          margin: 2%;
+        }
+        .intro-section a{
+          margin: 0;
+          margin-left: 15%;
+          display: inline-block;
+          /*border: 1px solid black;*/
+          font-size: 130%;
+          text-align: center;
+          line-height: 180%;
+          border: 0.5px solid #2874A6;
+        }
+
+        .btn-learn-more{
+          width: 110%;
+          height: 10vh;
+        }
+
+        .btn{
+          border-radius: 20px;
+          margin: 5%;
+        }
+        .btn-developer{
+          background: #D4AC0D;
+          color: #2874A6;
+          border-color:  #D4AC0D;
+          font-weight: bolder;
+          width: 110%;
+          height: 10vh;
+        }
+
+
+      .video-section{
+        width: 100%;
+        height: 80vh;
+        }
+
+      .video-section p{
+        padding-top: 12%;
+      }
+
+      .testimonial-section{
+        height: 120vh;
+      }
+
+      .section-learn{
+        height: 120vh;
+      }
+
+      .section-team{
+        height: 120vh;
+      }
+
+      .footer-section{
+        height: 25vh;
+      }
+
+
+
+}
