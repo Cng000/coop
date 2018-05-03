@@ -1,6 +1,7 @@
 var passport = require('passport');
 var GoogleStrategy = require('passport-google-oauth20');
 var model = require('../models/model');
+var keys = require('./keys')
 
 //serialize
 passport.serializeUser(function(user,done){
@@ -66,8 +67,8 @@ passport.deserializeUser(function(id,done){
 //Authenticate function api call
 passport.use(new GoogleStrategy({
     callbackURL:'/auth/google/redirect',
-    clientID:"994955090565-6jj0jjuo9hfr2j38f5u3dsbjmqmjgkba.apps.googleusercontent.com",
-    clientSecret:"8eQcMbcv2zWV7TKnDHA6i7rb"
+    clientID: keys.google.clientID,
+    clientSecret: keys.google.clientSecret
 },function(accessToken,refreshToken,profile,done){
 
   function Managergoogleid(id){

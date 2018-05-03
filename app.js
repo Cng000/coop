@@ -11,6 +11,7 @@ var passport = require('passport');
 var cookieSession = require('cookie-session');
 var mongoose = require('mongoose');
 var app = express();
+var keys = require('./config/keys')
 
 // view engine setup
 // changed to ejs
@@ -27,7 +28,7 @@ app.use('/assest',express.static(__dirname + '/public'));
 // cookie session
 app.use(cookieSession({
   maxAge: 24*60*1000,
-  keys:['griughqiw']
+  keys:[keys.cookie.secret]
 }));
 
 mongoose.connect('mongodb://localhost/mydb',function(){
